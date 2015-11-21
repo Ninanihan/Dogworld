@@ -13,6 +13,9 @@
     gem 'will_paginate',           '3.0.7'
     gem 'bootstrap-will_paginate', '0.0.10'
     gem 'faker',                   '1.4.2'
+    gem 'fog',                     '1.36.0'
+    gem 'carrierwave',             '0.10.0'
+    gem 'mini_magick',             '4.3.6'
 
     group :development, :test do
       gem 'sqlite3',     '1.3.9'

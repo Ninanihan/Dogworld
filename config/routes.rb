@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'pets/new'
+
   resources :users
   resources :microposts,          only: [:create, :destroy]
   

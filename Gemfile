@@ -22,6 +22,7 @@
       gem 'byebug',      '3.4.0'
       gem 'web-console', '2.0.0.beta3'
       gem 'spring',      '1.1.3'
+      gem 'annotate', '2.6.10'
     end
 
     group :production do

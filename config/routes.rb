@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'pets/new'
 
   resources :users
+  resources :pets
   resources :microposts,          only: [:create, :destroy]
   
   root 'static_pages#home'

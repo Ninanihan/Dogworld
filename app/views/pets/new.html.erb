@@ -1,2 +1,24 @@
-<h1>Pets#new</h1>
-<p>Find me in app/views/pets/new.html.erb</p>
+<% provide(:title, 'Add pet') %>
+<h1>Add pet</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@pet) do |f| %>
+    <%= render 'shared/error_messages_pet' %>
+      <%= f.label :nickname %>
+      <%= f.text_field :nickname, class: 'form-control' %>
+
+      <%= f.label :age %>
+      <%= f.text_field :age, class: 'form-control' %>
+
+      <%= f.label :gender %>
+      <%= f.text_field :gender, class: 'form-control' %>
+
+      <%= f.label :breeds %>
+      <%= f.text_field :breeds, class: 'form-control' %>
+
+      <%= f.submit "Add an pet", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

@@ -4,12 +4,16 @@ Rails.application.routes.draw do
 
   resources :users
   resources :pets
+  resources :searches
   resources :microposts,          only: [:create, :destroy]
   
   root 'static_pages#home'
 
   get 'sessions/new'
   get 'users/new'
+  
+ 
+
 
   get 'help'    => 'static_pages#help'
   get 'about'   => 'static_pages#about'

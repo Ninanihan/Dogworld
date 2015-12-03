@@ -9,7 +9,7 @@
       <%= f.text_field :nickname, class: 'form-control' %>
 
       <%= f.label :age %>
-      <%= f.text_field :age,  class: 'form-control' %>
+      <%= f.select(:age,@option = options_for_select([[''],['0 - 3 months'],['3 months - 6 months'],['6 months - 1 year'],['1 year - 2 years'],['2 years - 3 years'],['3 years - 4 years'],['4 years - 5 years'],['5 years - 6 years'],['over 6 years']],@pet.age)) %>
 
       <%= f.label :gender %>
       <%= f.select(:gender,@option = options_for_select([['',''],['Male','0'],['Female','1']],@pet.gender)) %>

@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151130235245) do
+ActiveRecord::Schema.define(version: 20151203203256) do
+
+  create_table "breeds", primary_key: "breeds_id", force: :cascade do |t|
+    t.text "breeds_name"
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -26,16 +30,13 @@ ActiveRecord::Schema.define(version: 20151130235245) do
 
   create_table "pets", force: :cascade do |t|
     t.string   "nickname"
-    t.integer  "age"
-    t.string   "gender"
+    t.text     "age"
+    t.integer  "gender"
     t.string   "breeds"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "pets", ["user_id", "created_at"], name: "index_pets_on_user_id_and_created_at"
-  add_index "pets", ["user_id"], name: "index_pets_on_user_id"
 
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
@@ -47,6 +48,14 @@ ActiveRecord::Schema.define(version: 20151130235245) do
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "age"
+    t.integer  "gender"
+    t.string   "breeds"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

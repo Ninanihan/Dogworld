@@ -1,0 +1,16 @@
+<% provide(:title, 'All pets') %>
+<h1>All pets</h1>
+
+<%= will_paginate %>
+<ul class="pets">
+  <% @pets.each do |pet| %>
+  
+    <li>
+      <%= link_to pet.nickname, pet %>
+      <%= link_to pet.age, pet %>
+      <%= link_to pet.gender, pet %>
+      <%= link_to pet.breeds, pet %>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate %>

@@ -1,5 +1,11 @@
 class PetsController < ApplicationController
 
+
+  def index
+    @pets = Pet.paginate(page: params[:page])
+
+  end
+
   def show
   	@pet = Pet.find(params[:id])
 

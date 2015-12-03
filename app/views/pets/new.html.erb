@@ -9,13 +9,13 @@
       <%= f.text_field :nickname, class: 'form-control' %>
 
       <%= f.label :age %>
-      <%= f.text_field :age, class: 'form-control' %>
+      <%= f.text_field :age,  class: 'form-control' %>
 
       <%= f.label :gender %>
-      <%= f.text_field :gender, class: 'form-control' %>
+      <%= f.select(:gender,@option = options_for_select([['',''],['Male','0'],['Female','1']],@pet.gender)) %>
 
       <%= f.label :breeds %>
-      <%= f.text_field :breeds, class: 'form-control' %>
+      <%= f.text_field :breeds %>
 
       <%= f.submit "Add an pet", class: "btn btn-primary" %>
     <% end %>

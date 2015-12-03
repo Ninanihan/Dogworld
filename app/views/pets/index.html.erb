@@ -7,9 +7,12 @@
   
     <li>
       <%= link_to pet.nickname, pet %>
-      <%= pet.age %>
-      <%= (pet.gender==0?"Male":"Female") %>
-      <%= pet.breeds %>
+      <br/>
+      <%= "Age:" %><%= pet.age %>
+      <br/>
+      <%= "Gender:" %><%= (pet.gender==0?"Male":"Female") %>
+      <br/>
+      <%= "Breeds:" %><%= pet.breeds %>
     </li>
   <% end %>
 </ul>

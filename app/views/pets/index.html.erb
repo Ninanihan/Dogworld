@@ -7,6 +7,8 @@
   <% @pets.each do |pet| %>
   
     <li>
+      <%= image_tag pet.image.url(:thumb) %>
+      <br/>
       <%= link_to pet.nickname, pet %>
       <br/>
       <%= "Age:" %><%= pet.age %>

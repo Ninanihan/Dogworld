@@ -16,6 +16,7 @@
     gem 'fog',                     '1.36.0'
     gem 'carrierwave',             '0.10.0'
     gem 'mini_magick',             '4.3.6'
+    gem 'paperclip' ,              '4.3.2'
 
     group :development, :test do
       gem 'sqlite3',     '1.3.9'

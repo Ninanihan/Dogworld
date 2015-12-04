@@ -3,6 +3,9 @@
 <%= @pet.nickname %>
 </h1>
 <h2>
+<%= image_tag @pet.image.url(:medium) %>
+</h2>
+<h2>
 	<%= "Age:" %>
 
 	<%= @pet.age %>
@@ -24,6 +27,7 @@
 	<%= "Owner's email:" %>
 	<%= @pet.owner_email %>
 </h2>
+<%= link_to 'Back', pets_path %>
 
   
 

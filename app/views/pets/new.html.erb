@@ -3,8 +3,12 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@pet) do |f| %>
+    <%= form_for @pet, html: { multipart: true } do |f| %>
     <%= render 'shared/error_messages_pet' %>
+
+      <%= f.label :image %>
+      <%= f.file_field :image, class: 'form-control' %>
+
       <%= f.label :nickname %>
       <%= f.text_field :nickname, class: 'form-control' %>
 

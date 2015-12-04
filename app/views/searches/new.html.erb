@@ -15,6 +15,9 @@
       <%= f.label :breeds %>
       <%= f.select(:breeds,@option = options_for_select([[''],['Labrador'],['German Shepherd'],['German Shepherd'],['Beagle'],['Golden Retriever'],['Yorkshire Terrier'],['Bulldog'],['Box'],['Poodle'],['Others']],@search.breeds)) %>
 
+      <%= f.label :city %>
+      <%= f.select(:city,@option = options_for_select([[''],['Carlow'],['Cavan'],['Clare'],['Cork'],['Donegal'],['Dublin'],['Kerry'],['Kildare'],['Kilkenny'],['Laois'],['Leitrim'],['Limerick'],['Longford'],['Louth'],['Mayo'],['Meath'],['Monaghan'],['Offaly'],['Roscommon'],['Sligo'],['Tipperary'],['Waterford'],['Westmeath'],['Wexford'],['Wicklow']],@pet.city)) %>
+
       <%= f.submit "Search", class: "btn btn-primary" %>
     <% end %>
   </div>

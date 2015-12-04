@@ -17,6 +17,14 @@
       <%= f.label :breeds %>
       <%= f.select(:breeds,@option = options_for_select([[''],['Labrador'],['German Shepherd'],['German Shepherd'],['Beagle'],['Golden Retriever'],['Yorkshire Terrier'],['Bulldog'],['Box'],['Poodle'],['Others']],@pet.breeds)) %>
 
+      <%= f.label :city %>
+      <%= f.select(:city,@option = options_for_select([[''],['Carlow'],['Cavan'],['Clare'],['Cork'],['Donegal'],['Dublin'],['Kerry'],['Kildare'],['Kilkenny'],['Laois'],['Leitrim'],['Limerick'],['Longford'],['Louth'],['Mayo'],['Meath'],['Monaghan'],['Offaly'],['Roscommon'],['Sligo'],['Tipperary'],['Waterford'],['Westmeath'],['Wexford'],['Wicklow']],@pet.city)) %>
+
+      <%= f.label :owner_email %>
+      <%= f.email_field :owner_email, class: 'form-control' %>
+
+
+
       <%= f.submit "Add an pet", class: "btn btn-primary" %>
     <% end %>
   </div>

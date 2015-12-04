@@ -14,7 +14,13 @@
       <%= "Gender:" %><%= (pet.gender==0?"Male":"Female") %>
       <br/>
       <%= "Breeds:" %><%= pet.breeds %>
+      <br/>
+      <%= "City:" %><%= pet.city %>
+      <br/>
+      <%= link_to pet.owner_email, pet %>
+      
     </li>
   <% end %>
 </ul>
+
 <%= will_paginate %>

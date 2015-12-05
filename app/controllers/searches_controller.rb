@@ -1,6 +1,7 @@
 class SearchesController < ApplicationController
 	def new
 		@search = Search.new
+
 	end
 
 	def create
@@ -14,6 +15,6 @@ class SearchesController < ApplicationController
 
 	private
 	def search_params
-		params.require(:search).permit(:age, :gender, :breeds, :city)
+		params.require(:search).permit(:age, :gender, :breeds)
 	end
 end

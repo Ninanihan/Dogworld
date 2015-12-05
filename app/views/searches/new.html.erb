@@ -3,22 +3,22 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@search) do |f| %>
+    <%= form_for(@search) do |s| %>
     
 
-      <%= f.label :age %>
-      <%= f.select(:age,@option = options_for_select([[''],['0 - 3 months'],['3 months - 6 months'],['6 months - 1 year'],['1 year - 2 years'],['2 years - 3 years'],['3 years - 4 years'],['4 years - 5 years'],['5 years - 6 years'],['over 6 years']],@search.age)) %>
+      <%= s.label :age %>
+      <%= s.select(:age,@option = options_for_select([[''],['0 - 3 months'],['3 months - 6 months'],['6 months - 1 year'],['1 year - 2 years'],['2 years - 3 years'],['3 years - 4 years'],['4 years - 5 years'],['5 years - 6 years'],['over 6 years']],@search.age)) %>
 
-      <%= f.label :gender %>
-      <%= f.select(:gender,@option = options_for_select([['',''],['Male','0'],['Female','1']],@search.gender)) %>
+      <%= s.label :gender %>
+      <%= s.select(:gender,@option = options_for_select([['',''],['Male','0'],['Female','1']],@search.gender)) %>
 
-      <%= f.label :breeds %>
-      <%= f.select(:breeds,@option = options_for_select([[''],['Labrador'],['German Shepherd'],['German Shepherd'],['Beagle'],['Golden Retriever'],['Yorkshire Terrier'],['Bulldog'],['Box'],['Poodle'],['Others']],@search.breeds)) %>
+      <%= s.label :breeds %>
+      <%= s.select(:breeds,@option = options_for_select([[''],['Labrador'],['German Shepherd'],['German Shepherd'],['Beagle'],['Golden Retriever'],['Yorkshire Terrier'],['Bulldog'],['Box'],['Poodle'],['Others']],@search.breeds)) %>
 
-      <%= f.label :city %>
-      <%= f.select(:city,@option = options_for_select([[''],['Carlow'],['Cavan'],['Clare'],['Cork'],['Donegal'],['Dublin'],['Kerry'],['Kildare'],['Kilkenny'],['Laois'],['Leitrim'],['Limerick'],['Longford'],['Louth'],['Mayo'],['Meath'],['Monaghan'],['Offaly'],['Roscommon'],['Sligo'],['Tipperary'],['Waterford'],['Westmeath'],['Wexford'],['Wicklow']],@pet.city)) %>
+      
+      
 
-      <%= f.submit "Search", class: "btn btn-primary" %>
+      <%= s.submit "Search", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

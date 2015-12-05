@@ -8,12 +8,13 @@
   <% @search.search_pets.each do |f| %>
   <br>
   <div class="div">
-  	<h1><%= f.nickname %></h1>
-  	<p>Age: <%= f.age %></p>
-  	<p>Gender: <%= f.gender %></p>
-  	<p>Breeds: <%= f.breeds %></p>
-  	<p>City: <%= f.city %></p>
-  	<p><%= link_to 'Owner's email, show_user_path %></p>
+  	<h1><%= link_to f.nickname, f %></h1>
+    
+  	<h2>Age: <%= f.age %></h2>
+  	<h2>Gender: <%= f.gender==0?"Male":"Female" %></h2>
+  	<h2>Breeds: <%= f.breeds %></h2>
+    
+  	
 
   </div>
 <% end %>

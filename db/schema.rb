@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151204202540) do
-
-  create_table "breeds", primary_key: "breeds_id", force: :cascade do |t|
-    t.text "breeds_name"
-  end
+ActiveRecord::Schema.define(version: 20151206010819) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"

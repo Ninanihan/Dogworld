@@ -19,7 +19,11 @@
       <br/>
       <%= "City:" %><%= pet.city %>
       <br/>
-      <%= link_to pet.owner_email, pet %>
+      <%= "Email:" %>
+      <%= link_to pet.user_email, pet.user %>
+      
+      
+      
       
     </li>
   <% end %>

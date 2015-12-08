@@ -24,9 +24,9 @@
       <%= f.label :city %>
       <%= f.select(:city,@option = options_for_select([[''],['Carlow'],['Cavan'],['Clare'],['Cork'],['Donegal'],['Dublin'],['Kerry'],['Kildare'],['Kilkenny'],['Laois'],['Leitrim'],['Limerick'],['Longford'],['Louth'],['Mayo'],['Meath'],['Monaghan'],['Offaly'],['Roscommon'],['Sligo'],['Tipperary'],['Waterford'],['Westmeath'],['Wexford'],['Wicklow']],@pet.city)) %>
 
-      <%= f.label :owner_email %>
-      <%= f.email_field :owner_email, class: 'form-control' %>
-
+      
+      <%= f.hidden_field(:user_id, :value=>current_user.id)  %>
+      <%= f.hidden_field(:user_email, :value=>current_user.email)  %>
 
 
       <%= f.submit "Add an pet", class: "btn btn-primary" %>

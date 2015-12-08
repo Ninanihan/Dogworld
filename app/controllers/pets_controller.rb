@@ -32,7 +32,7 @@ class PetsController < ApplicationController
 
     def pet_params
       params.require(:pet).permit(:nickname, :age, :gender,
-                                   :breeds, :city, :owner_email, :image)
+                                   :breeds, :city, :user_email, :image, :user_id)
     end
   	
 end

@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206010819) do
+ActiveRecord::Schema.define(version: 20151211151249) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.integer  "pet_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["pet_id"], name: "index_comments_on_pet_id"
+  add_index "comments", ["user_id", "pet_id", "created_at"], name: "index_comments_on_user_id_and_pet_id_and_created_at"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -30,15 +42,14 @@ ActiveRecord::Schema.define(version: 20151206010819) do
     t.integer  "gender"
     t.string   "breeds"
     t.text     "city"
-    t.text     "owner_email"
     t.integer  "user_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.string   "picture"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.text     "user_email"
   end
 
   create_table "relationships", force: :cascade do |t|

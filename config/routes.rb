@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'pets/new'
 
   resources :users
-  resources :pets
+  resources :pets do 
+    resources :comments
+  end
   resources :searches
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]

@@ -28,6 +28,21 @@
 	<%= @pet.user_email %>
 </h2>
 
+  <div>
+    
+    <h2><%= @pet.comments.count %> Comments</h2>
+    <%= render @pet.comments %>
+
+    <h3>Add a comment</h3>
+    <%= form_for([@pet, @pet.comments.build]) do |f| %>
+    <p>
+      <%= f.label :body %></br>
+      <%= f.text_field :body %>
+    </p>
+    </br>
+    <%= f.submit %>
+    <% end %>  
+  </div>
 
 <%= link_to 'Back', pets_path %>
 

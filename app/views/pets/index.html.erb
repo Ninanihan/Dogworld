@@ -1,11 +1,19 @@
 <% provide(:title, 'All pets') %>
 <h1>All pets</h1>
+<%= form_tag searched_path, method: :get do %>
+    <%= text_field_tag :search, params[:search], placeholder: "input what you want" %>
+    <center>
+       <% end %>
+  <input class="btn btn-large btn-primary" name="commit" type="submit" value="Search">
+    </center>
 <h1><%= link_to "Search", new_search_path %></h1>
 
 <%= will_paginate %>
+<table class="table table-striped">
+   <tbody>
 <ul class="pets">
   <% @pets.each do |pet| %>
-  
+  <td>
     <li>
       <%= image_tag pet.image.url(:thumb) %>
       <br/>
@@ -21,13 +29,11 @@
       <br/>
       <%= "Email:" %>
       <%= link_to pet.user_email, pet.user %>
-      
-      
-      
-      
+       
     </li>
-    
+    </td>
   <% end %>
 </ul>
 
+</table>
 <%= will_paginate %>

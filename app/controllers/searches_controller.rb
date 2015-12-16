@@ -18,3 +18,4 @@ class SearchesController < ApplicationController
 		params.require(:search).permit(:age, :gender, :breeds)
 	end
 end
+

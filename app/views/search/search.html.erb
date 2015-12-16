@@ -1,0 +1,23 @@
+<h1>search results</h1>
+<table class="table table-striped">
+  <thead>
+  
+  </thead>
+
+  <tbody>
+    <% @pet.each do |pet| %>
+      <br>
+  <div class="div">
+    <h1><%= link_to pet.nickname, pet %></h1>
+    
+    <h2>Age: <%= pet.age %></h2>
+    <h2>Gender: <%= pet.gender==0?"Male":"Female" %></h2>
+    <h2>Breeds: <%= pet.breeds %></h2>
+    
+    
+
+  </div>
+    <% end %> 
+  </tbody>
+</table>
+<%= link_to "Back", pets_path %>

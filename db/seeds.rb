@@ -32,3 +32,16 @@
    Search.create(age: '0 - 3 months', gender:'1', breeds:'Beagle')
    Search.create(age: '0 - 3 months', gender:'0', breeds:'Box')
    Search.create(age: '0 - 3 months', gender:'1', breeds:'Others')
+
+# Create some comments
+   user = User.find(1)
+   pet = Pet.find(2) 
+   pet.comments.create(body: 'Hi!',user_id: '1')
+
+   user = User.find(2)
+   pet = Pet.find(3) 
+   pet.comments.create(body: 'Hi!',user_id: '2')
+   
+   user = User.find(4)
+   pet = Pet.find(4) 
+   pet.comments.create(body: 'Hi!',user_id: '4')

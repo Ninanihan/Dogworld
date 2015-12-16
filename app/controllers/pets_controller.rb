@@ -2,7 +2,7 @@ class PetsController < ApplicationController
 
 
   def index
-    @pets = Pet.paginate(page: params[:page])
+    @pets = Pet.paginate(page: params[:page], :per_page => 5)
 
   end
 

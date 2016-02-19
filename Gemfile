@@ -1,6 +1,6 @@
  source 'https://rubygems.org'
  
-    gem 'bootstrap-sass',       '3.2.0.0'
+    
     gem 'rails',        '4.2.2'
     gem 'sass-rails',   '5.0.2'
     gem 'uglifier',     '2.5.3'
@@ -9,6 +9,10 @@
     gem 'jquery-rails', '4.0.3'
     gem 'turbolinks',   '2.3.0'
     gem 'jbuilder',     '2.2.3'
+    gem 'haml' ,        '4.0.7'
+    gem 'simple_form', '~> 3.2', '>= 3.2.1'
+    gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+    gem 'cocoon', '~> 1.2', '>= 1.2.7'
     gem 'sdoc',         '0.4.0', group: :doc
     gem 'will_paginate',           '3.0.7'
     gem 'bootstrap-will_paginate', '0.0.10'
@@ -17,6 +21,7 @@
     gem 'carrierwave',             '0.10.0'
     gem 'mini_magick',             '4.3.6'
     gem 'paperclip' ,              '4.3.2'
+
 
     group :development, :test do
       gem 'sqlite3',     '1.3.9'

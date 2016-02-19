@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :searches
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
-  
+  resources :products
   root 'static_pages#home'
 
   get 'sessions/new'

@@ -1,5 +1,5 @@
 <% provide(:title, 'Home') %>
-<% if logged_in? %>
+
   <div class="row">
     <aside class="col-md-4">
       <section class="user_info">
@@ -17,40 +17,6 @@
       <%= render 'shared/feed' %>
     </div>
   </div>
-<% else %>
-   
-    <div class="background">    
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-       <br/>
-       <br/>
-      
-      <h1>Welcome to the Dog World</h1>
-    
-      <h2><%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %></h2>
-
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-       <br/>
-    </div> 
- 
-      
 
    
    
-<% end %>

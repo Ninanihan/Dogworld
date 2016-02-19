@@ -10,11 +10,14 @@ Rails.application.routes.draw do
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
   resources :products
-  root 'static_pages#home'
+  root 'static_pages#welcome'
 
   get 'sessions/new'
   get 'users/new'
-  
+  get 'users/index'
+  get 'breeders/index'
+  get 'products/index'
+  get 'users/create'
  
   
 
@@ -24,7 +27,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
-  get 'microposts'    => 'microposts#new'
+  get    'microposts'   => 'static_pages#home'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
    match '/searched', to: 'search#search', via: 'get'

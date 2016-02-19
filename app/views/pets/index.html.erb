@@ -8,32 +8,22 @@
     </center>
 <h1><%= link_to "Search", new_search_path %></h1>
 
-<%= will_paginate %>
-<table class="table table-striped">
-   <tbody>
-<ul class="pets">
-  <% @pets.each do |pet| %>
-  <td>
-    <li>
-      <%= image_tag pet.image.url(:thumb) %>
-      <br/>
-      <%= link_to pet.nickname, pet %>
-      <br/>
-      <%= "Age:" %><%= pet.age %>
-      <br/>
-      <%= "Gender:" %><%= (pet.gender==0?"Male":"Female") %>
-      <br/>
-      <%= "Breeds:" %><%= pet.breeds %>
-      <br/>
-      <%= "City:" %><%= pet.city %>
-      <br/>
-      <%= "Email:" %>
-      <%= link_to pet.user_email, pet.user %>
-       
-    </li>
-    </td>
-  <% end %>
-</ul>
+<% @pet.each_slice(4) do |pets| %>
+  <div class="row">
+    <% pets.each do |pet| %>
+      <div class="col-md-4">
+        <div class="recipe">
+          <div class="image_wrapper">
+            <%= link_to pet do %>
+              <%= image_tag pet.image.url(:thumb) %>
+            <% end %>
+          </div>
+          <h2>
+            <%= link_to pet.nickname, pet %>
+          </h2>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
 
-</table>
-<%= will_paginate %>

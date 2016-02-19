@@ -1,22 +1,42 @@
-<%= image_tag @product.image.url(:medium), class: "recipe_image" %>
+<% provide(:title, @product.breeds) %>
 <h1>
-  <%= @product.breeds %>
+<%= @product.breeds %>
 </h1>
 <h2>
-  <%= @product.gender %>
+<%= image_tag @product.image.url(:medium) %>
 </h2>
 <h2>
-  <%= @product.age %>
+	<%= "Gender:" %>
+	<%= @product.gender==0?"Male":"Female" %>
 </h2>
 <h2>
-  <%= @product.city %>
+	<%= "Age:" %>
+
+	<%= @product.age %>
+	
+</h2>
+
+
+<h2>
+	<%= "City:" %>
+	<%= @product.city %>
 </h2>
 <h2>
-  <%= @product.price %>
+	<%= "Price: €" %>
+	<%= @product.price %>
 </h2>
-<p class="description">
-  <%= @product.description %>
-</p>
+<h3>
+	<%= "Description:" %>
+	<%= @product.description %>
+</h23>
+<h2>
+	<%= "Email:" %>
+	<%= @product.user_email %>
+</h2>
+
+ 
+
+
 <%= link_to "Back", root_path, class: "btn btn-default" %>
 <% if logged_in? %>
   <%= link_to "Edit", edit_product_path, class: "btn btn-default" %>

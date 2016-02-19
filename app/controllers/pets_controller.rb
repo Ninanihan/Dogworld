@@ -2,7 +2,7 @@ class PetsController < ApplicationController
 
 
   def index
-    @pets = Pet.paginate(page: params[:page], :per_page => 5)
+    @pet = Pet.all.order("created_at DESC")
 
   end
 

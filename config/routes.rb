@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'users/new'
   
  
+  
 
 
   get 'help'    => 'static_pages#help'
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
+  get 'microposts'    => 'microposts#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
    match '/searched', to: 'search#search', via: 'get'

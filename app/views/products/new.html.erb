@@ -23,10 +23,10 @@
       <%= f.select(:city,@option = options_for_select([[''],['Carlow'],['Cavan'],['Clare'],['Cork'],['Donegal'],['Dublin'],['Kerry'],['Kildare'],['Kilkenny'],['Laois'],['Leitrim'],['Limerick'],['Longford'],['Louth'],['Mayo'],['Meath'],['Monaghan'],['Offaly'],['Roscommon'],['Sligo'],['Tipperary'],['Waterford'],['Westmeath'],['Wexford'],['Wicklow']],@product.city)) %>
 
       <%= f.label :price %>
-      <%= f.text_field :price, class: 'form-control' %>
+      <%= f.text_field :price, placeholder: "€", class: 'form-control' %>
 
       <%= f.label :description %>
-      <%= f.text_field :description, class: 'form-control' %>
+      <%= f.text_area :description, class: 'form-control' %>
 
       
       <%= f.hidden_field(:user_id, :value=>current_user.id)  %>

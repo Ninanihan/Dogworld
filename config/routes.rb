@@ -14,10 +14,7 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
   get 'users/new'
-  get 'users/index'
-  get 'breeders/index'
-  get 'products/index'
-  get 'users/create'
+  
  
   
 
@@ -26,6 +23,7 @@ Rails.application.routes.draw do
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   get 'signup'  => 'users#new'
+  get 'breeders'  => 'breeders#index'
   get    'login'   => 'sessions#new'
   get    'microposts'   => 'static_pages#home'
   post   'login'   => 'sessions#create'

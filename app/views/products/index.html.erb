@@ -1,3 +1,6 @@
+<% provide(:title, 'All products') %>
+<h1>All sales  <a href="http://localhost:3000/products/new" class="btn btn-dark btn-lg">
+  Add Breeder  </a>  </h1>
 <% @product.each_slice(3) do |products| %>
   <div class="row">
     <% products.each do |product| %>

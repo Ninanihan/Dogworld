@@ -1,12 +1,9 @@
-<% provide(:title, 'All pets') %>
-<h1>All pets</h1>
-<%= form_tag searched_path, method: :get do %>
-    <%= text_field_tag :search, params[:search], placeholder: "input what you want" %>
-    <center>
-       <% end %>
-  <input class="btn btn-large btn-primary" name="commit" type="submit" value="Search">
-    </center>
-<h1><%= link_to "Search", new_search_path %></h1>
+<% provide(:title, 'All breeders') %>
+<h1>All breeders  <a href="http://localhost:3000/pets/new" class="btn btn-dark btn-lg">
+  Add Breeder  </a>  <a href="http://localhost:3000/searches/new" class="btn btn-dark btn-lg">
+  Search  </a>  </h1>
+
+
 
 <% @pet.each_slice(4) do |pets| %>
   <div class="row">
@@ -21,6 +18,7 @@
           <h2>
             <%= link_to pet.nickname, pet %>
           </h2>
+          <h2>Owner: <%= link_to pet.user_email, pet.user %> </h2>
         </div>
       </div>
     <% end %>
